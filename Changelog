@@ -1,37 +1,41 @@
 ------------------------------------------------------------------------
-rev 9:  root | 2003-07-19 20:07:51 +0200 (Sat, 19 Jul 2003) | 1 line
+rev 4:  egmont | 2003-04-05 22:22:12 +0200 (Sat, 05 Apr 2003) | 7 lines
 Changed paths:
-   A /tags/0.3.1 (from /trunk:8)
+   A /README_EN
+   A /README_HU
+   M /TODO
+   A /VERSION
+   M /libsortdir.c
 
-0.3.1
+strcoll() haszn?\195?\161lata strcmp() helyett -> locale-f?\195?\188gg?\197?\145 lett a rendez?\195?\169s.
+SORTDIR_LOCALE v?\195?\161ltoz?\195?\179val megadhat?\195?\179, hogy m?\195?\161s locale szerint rendezzen.
+SORTDIR_REVERSE ?\195?\169rtelemszer?\197?\177 funkci?\195?\179val.
+RTLD_NEXT-et nem kell defini?\195?\161lni, ha _GNU_SOURCE defini?\195?\161lva van.
+VERSION f?\195?\161jl: 0.3.
+Doksi magyarul ?\195?\169s angolul is.
+
 ------------------------------------------------------------------------
-rev 8:  pozsy | 2003-07-19 20:07:45 +0200 (Sat, 19 Jul 2003) | 1 line
+rev 3:  egmont | 2003-02-25 15:09:00 +0100 (Tue, 25 Feb 2003) | 2 lines
 Changed paths:
-   D /trunk/VERSION
+   M /libsortdir.c
 
-remove VERSION
+static nélkül szívás az élet.
+
 ------------------------------------------------------------------------
-rev 7:  pozsy | 2003-07-19 13:27:44 +0200 (Sat, 19 Jul 2003) | 1 line
+rev 2:  egmont | 2003-02-25 00:41:42 +0100 (Tue, 25 Feb 2003) | 2 lines
 Changed paths:
-   D /COPYING.LIB
-   D /Makefile
-   D /README_EN
-   D /README_HU
-   D /TODO
-   D /VERSION
-   A /branches
-   D /libsortdir.c
-   D /sortdir
-   A /tags
-   A /trunk
-   A /trunk/COPYING.LIB (from /COPYING.LIB:6)
-   A /trunk/Makefile (from /Makefile:6)
-   A /trunk/README_EN (from /README_EN:6)
-   A /trunk/README_HU (from /README_HU:6)
-   A /trunk/TODO (from /TODO:6)
-   A /trunk/VERSION (from /VERSION:6)
-   A /trunk/libsortdir.c (from /libsortdir.c:6)
-   A /trunk/sortdir (from /sortdir:6)
+   M /libsortdir.c
 
-new repository layout
+0.2: 32/64 bites cuccok korrektebb kezelése.
+
+------------------------------------------------------------------------
+rev 1:  egmont | 2003-02-25 00:40:25 +0100 (Tue, 25 Feb 2003) | 2 lines
+Changed paths:
+   A /Makefile
+   A /TODO
+   A /libsortdir.c
+   A /sortdir
+
+0.1 beültetve.
+
 ------------------------------------------------------------------------
