@@ -1,0 +1,2 @@
+readdir_r és readdir64_r felülbírálása.
+Írni doksit.

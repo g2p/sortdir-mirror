@@ -1,0 +1,21 @@
+#!/bin/bash
+
+LIBSORTDIR="/usr/lib/libsortdir.so"
+
+if [ ! -n "$LD_PRELOAD" ]; then
+	LD_PRELOAD="$LIBSORTDIR"
+else
+	# This is The Right Way (tm)
+	# Appending the new library to the old LD_PRELOAD would suck.
+	LD_PRELOAD="$LIBSORTDIR $LD_PRELOAD"
+fi
+export LD_PRELOAD
+
+if [ $# = 0 ]; then
+	prog="$SHELL"
+else
+	prog="$1"
+	shift
+fi
+exec "$prog" "$@"
+
