@@ -1,1 +1,1 @@
-Override readdir_r and readdir64_r.
+Override readdir_r and readdir64_r as well as getdents{,64}.

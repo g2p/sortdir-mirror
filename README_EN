@@ -10,6 +10,9 @@ override this by setting the SORTDIR_LOCALE environment variable. Examples:
 or
   export SORTDIR_LOCALE=C
 
+Version comparing (see strverscmp(3)) is performed if SORTDIR_VERSCMP is set
+to any value. In this case SORTDIR_LOCALE is ignored.
+
 Reverse ordering is provided if SORTDIR_REVERSE is set to any value.
 
 

@@ -10,6 +10,10 @@ függ. Ez felülbírálható a SORTDIR_LOCALE változóval. Például:
 vagy
   export SORTDIR_LOCALE=C
 
+A SORTDIR_VERSCMP változó tetszõleges értékre állításával verziószám
+szerinti sorrendezés (lásd strverscmp(3)) kérhetõ. Ekkor SORTDIR_LOCALE-t
+figyelmen kívül hagyjuk.
+
 A rendezés sorrendje az ellenkezõjére fordul, ha beállítjuk a
 SORTDIR_REVERSE változót tetszõleges értékre.
 

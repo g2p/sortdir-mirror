@@ -1,3 +1,22 @@
+/*
+    libsortdir -- sort directory entries
+    Copyright (C) 2002, 2003  Egmont Koblinger <egmont@uhulinux.hu>
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this library; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA
+*/
+
 #define _GNU_SOURCE
 #include <unistd.h>
 #include <stdlib.h>
@@ -22,6 +41,7 @@ struct dirlist {
 static struct dirlist dirlist[1024];
 
 static locale_t locale = 0;
+static int verscmp = 0;
 static int reverse = 0;
 
 static struct dirent *(*next_readdir)(DIR *dir);
@@ -35,6 +55,9 @@ void sortdir_init (void) __attribute((constructor));
 void sortdir_init (void)
 {
 	char *sortdir_locale;
+	if (getenv("SORTDIR_VERSCMP") != NULL) {
+		verscmp = 1;
+	}
 	if ((sortdir_locale = getenv("SORTDIR_LOCALE")) != NULL) {
 		locale = newlocale(LC_ALL_MASK, sortdir_locale, NULL);
 	}
@@ -51,7 +74,9 @@ void sortdir_init (void)
 static int do_compare (const char *a, const char *b)
 {
 	int i;
-	if (locale == 0) {
+	if (verscmp) {
+		i = strverscmp(a, b);
+	} else if (locale == 0) {
 		i = strcoll(a, b);
 	} else {
 		i = strcoll_l(a, b, locale);
@@ -64,14 +89,14 @@ static int compare (const void *a, const void *b)
 	const struct dirent *a2 = a;
 	const struct dirent *b2 = b;
 	return do_compare(a2->d_name, b2->d_name);
-} 
+}
 
 static int compare64 (const void *a, const void *b)
 {
 	const struct dirent64 *a2 = a;
 	const struct dirent64 *b2 = b;
 	return do_compare(a2->d_name, b2->d_name);
-} 
+}
 
 struct dirent *readdir (DIR *dir)
 {
