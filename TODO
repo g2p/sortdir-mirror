@@ -1,2 +1,1 @@
-readdir_r és readdir64_r felülbírálása.
-Írni doksit.
+Override readdir_r and readdir64_r as well as getdents{,64}.

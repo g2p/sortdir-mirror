@@ -1,0 +1,37 @@
+------------------------------------------------------------------------
+rev 9:  root | 2003-07-19 20:07:51 +0200 (Sat, 19 Jul 2003) | 1 line
+Changed paths:
+   A /tags/0.3.1 (from /trunk:8)
+
+0.3.1
+------------------------------------------------------------------------
+rev 8:  pozsy | 2003-07-19 20:07:45 +0200 (Sat, 19 Jul 2003) | 1 line
+Changed paths:
+   D /trunk/VERSION
+
+remove VERSION
+------------------------------------------------------------------------
+rev 7:  pozsy | 2003-07-19 13:27:44 +0200 (Sat, 19 Jul 2003) | 1 line
+Changed paths:
+   D /COPYING.LIB
+   D /Makefile
+   D /README_EN
+   D /README_HU
+   D /TODO
+   D /VERSION
+   A /branches
+   D /libsortdir.c
+   D /sortdir
+   A /tags
+   A /trunk
+   A /trunk/COPYING.LIB (from /COPYING.LIB:6)
+   A /trunk/Makefile (from /Makefile:6)
+   A /trunk/README_EN (from /README_EN:6)
+   A /trunk/README_HU (from /README_HU:6)
+   A /trunk/TODO (from /TODO:6)
+   A /trunk/VERSION (from /VERSION:6)
+   A /trunk/libsortdir.c (from /libsortdir.c:6)
+   A /trunk/sortdir (from /sortdir:6)
+
+new repository layout
+------------------------------------------------------------------------

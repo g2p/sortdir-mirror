@@ -1,0 +1,18 @@
+Usage:
+  sortdir command [arguments...]
+
+When using the sortdir library, applications will receive directory entries
+in alphabetical order.
+
+Ordering depends on the current locale used by your application. You can
+override this by setting the SORTDIR_LOCALE environment variable. Examples:
+  export SORTDIR_LOCALE=hu_HU
+or
+  export SORTDIR_LOCALE=C
+
+Reverse ordering is provided if SORTDIR_REVERSE is set to any value.
+
+
+
+Egmont Koblinger <egmont@uhulinux.hu>
+2002--2003
