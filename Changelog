@@ -1,11 +1,18 @@
 ------------------------------------------------------------------------
-rev 11:  egmont | 2003-09-24 02:51:37 +0200 (Wed, 24 Sep 2003) | 1 line
+r13 | egmont | 2005-08-31 17:07:00 +0200 (sze, 31 aug 2005) | 1 line
 Changed paths:
-   A /tags/0.4 (from /trunk:10)
+   A /tags/0.5 (from /trunk:12)
 
-0.4
+0.5
 ------------------------------------------------------------------------
-rev 10:  egmont | 2003-09-24 02:51:15 +0200 (Wed, 24 Sep 2003) | 2 lines
+r12 | egmont | 2005-08-31 17:06:57 +0200 (sze, 31 aug 2005) | 2 lines
+Changed paths:
+   M /trunk/README_HU
+
+- UTF-8
+
+------------------------------------------------------------------------
+r10 | egmont | 2003-09-24 02:51:15 +0200 (sze, 24 szept 2003) | 2 lines
 Changed paths:
    M /trunk/README_EN
    M /trunk/README_HU
@@ -14,13 +21,13 @@ Changed paths:
 support for strverscmp()
 
 ------------------------------------------------------------------------
-rev 8:  pozsy | 2003-07-19 20:07:45 +0200 (Sat, 19 Jul 2003) | 1 line
+r8 | pozsy | 2003-07-19 20:07:45 +0200 (szo, 19 júl 2003) | 1 line
 Changed paths:
    D /trunk/VERSION
 
 remove VERSION
 ------------------------------------------------------------------------
-rev 7:  pozsy | 2003-07-19 13:27:44 +0200 (Sat, 19 Jul 2003) | 1 line
+r7 | pozsy | 2003-07-19 13:27:44 +0200 (szo, 19 júl 2003) | 1 line
 Changed paths:
    D /COPYING.LIB
    D /Makefile

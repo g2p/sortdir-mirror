@@ -1,21 +1,21 @@
-Haszálat:
+HaszÃ¡lat:
   sortdir parancs [argumentumok...]
 
-A sortdir függvénytár használata esetén az alkalmazás a könyvtár
-bejegyzéseit ábécérendben kapja meg.
+A sortdir fÃ¼ggvÃ©nytÃ¡r hasznÃ¡lata esetÃ©n az alkalmazÃ¡s a kÃ¶nyvtÃ¡r
+bejegyzÃ©seit Ã¡bÃ©cÃ©rendben kapja meg.
 
-Az ábécérendbe rendezés alap esetben az alkalmazás által használt locale-tõl
-függ. Ez felülbírálható a SORTDIR_LOCALE változóval. Például:
+Az Ã¡bÃ©cÃ©rendbe rendezÃ©s alap esetben az alkalmazÃ¡s Ã¡ltal hasznÃ¡lt locale-tÅ‘l
+fÃ¼gg. Ez felÃ¼lbÃ­rÃ¡lhatÃ³ a SORTDIR_LOCALE vÃ¡ltozÃ³val. PÃ©ldÃ¡ul:
   export SORTDIR_LOCALE=hu_HU
 vagy
   export SORTDIR_LOCALE=C
 
-A SORTDIR_VERSCMP változó tetszõleges értékre állításával verziószám
-szerinti sorrendezés (lásd strverscmp(3)) kérhetõ. Ekkor SORTDIR_LOCALE-t
-figyelmen kívül hagyjuk.
+A SORTDIR_VERSCMP vÃ¡ltozÃ³ tetszÅ‘leges Ã©rtÃ©kre Ã¡llÃ­tÃ¡sÃ¡val verziÃ³szÃ¡m
+szerinti sorrendezÃ©s (lÃ¡sd strverscmp(3)) kÃ©rhetÅ‘. Ekkor SORTDIR_LOCALE-t
+figyelmen kÃ­vÃ¼l hagyjuk.
 
-A rendezés sorrendje az ellenkezõjére fordul, ha beállítjuk a
-SORTDIR_REVERSE változót tetszõleges értékre.
+A rendezÃ©s sorrendje az ellenkezÅ‘jÃ©re fordul, ha beÃ¡llÃ­tjuk a
+SORTDIR_REVERSE vÃ¡ltozÃ³t tetszÅ‘leges Ã©rtÃ©kre.
 
 
 
