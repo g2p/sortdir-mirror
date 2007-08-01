@@ -1,9 +1,19 @@
 ------------------------------------------------------------------------
-r13 | egmont | 2005-08-31 17:07:00 +0200 (sze, 31 aug 2005) | 1 line
+r15 | egmont | 2007-08-01 14:39:37 +0200 (sze, 01 aug 2007) | 1 line
 Changed paths:
-   A /tags/0.5 (from /trunk:12)
+   A /tags/0.6 (from /trunk:14)
 
-0.5
+0.6
+------------------------------------------------------------------------
+r14 | egmont | 2007-08-01 14:39:33 +0200 (sze, 01 aug 2007) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/COPYING.LIB
+   M /trunk/libsortdir.c
+   M /trunk/sortdir
+
+- override fdopendir
+
 ------------------------------------------------------------------------
 r12 | egmont | 2005-08-31 17:06:57 +0200 (sze, 31 aug 2005) | 2 lines
 Changed paths:

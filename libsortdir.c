@@ -1,6 +1,6 @@
 /*
     libsortdir -- sort directory entries
-    Copyright (C) 2002, 2003  Egmont Koblinger <egmont@uhulinux.hu>
+    Copyright (C) 2002, 2003, 2007  Egmont Koblinger <egmont@uhulinux.hu>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -47,6 +47,7 @@ static int reverse = 0;
 static struct dirent *(*next_readdir)(DIR *dir);
 static struct dirent64 *(*next_readdir64)(DIR *dir);
 static DIR *(*next_opendir)(const char *name);
+static DIR *(*next_fdopendir)(int fd);
 static int (*next_closedir)(DIR *dir);
 
 static int do_wrap = 0;
@@ -67,6 +68,7 @@ void sortdir_init (void)
 	next_readdir   = dlsym(RTLD_NEXT, "readdir");
 	next_readdir64 = dlsym(RTLD_NEXT, "readdir64");
 	next_opendir   = dlsym(RTLD_NEXT, "opendir");
+	next_fdopendir = dlsym(RTLD_NEXT, "fdopendir");
 	next_closedir  = dlsym(RTLD_NEXT, "closedir");
 	do_wrap = 1;
 }
@@ -134,14 +136,12 @@ struct dirent64 *readdir64 (DIR *dir)
 	return (struct dirent64 *) dirent;
 }
 
-DIR *opendir (const char *name)
+static DIR *opendir_common (DIR *dir)
 {
-	DIR *dir;
 	struct dirent *dirent;
 	int fd;
 	int i = 0;
 	int alloc = 64;
-	dir = next_opendir(name);
 	if (dir == NULL) return dir;
 	if (!do_wrap) return dir;
 	do_wrap = 0;
@@ -169,6 +169,16 @@ DIR *opendir (const char *name)
 	do_wrap = 1;
 	rewinddir(dir);
 	return dir;
+}
+
+DIR *opendir (const char *name)
+{
+	return opendir_common(next_opendir(name));
+}
+
+DIR *fdopendir (int fd)
+{
+	return opendir_common(next_fdopendir(fd));
 }
 
 int closedir (DIR *dir)
